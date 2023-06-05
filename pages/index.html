@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Double period before forward slash tells html file to navigate up one folder (to a parent folder) then look for a folder or stylesheet to link to.  -->
+    <link rel="stylesheet" href="../style/index.css">
+    <title>Test Form</title>
+  </head>
+
+  <body> 
+    <main>
+      <h1>This is a Test Form</h1>
+      <!-- Put a div box around the form so I could style the form without affecting anything else I might put in main. There is probably a better way. -->
+      <div class="flex-box">
+        <form class="testForm" onsubmit="return enterDetails(event);">
+          <label for="email">Email: </label>
+          <input type="email" name="email" id="email" placeholder="janedoe@email.com" required> 
+          <!-- Placeholder attribute puts an example of text required in a field but does not allow a user to submit the form with pre-filled info. -->
+          <label for="firstName">First Name: </label>
+          <input type="text" name="firstName" id="firstName" placeholder="Jane" required>
+          <label for="lastName">Last Name: </label>
+          <input type="text" name="lastName" id="lastName" placeholder="Doe" required>
+          <input type="reset" value="Reset Form">
+          <input type="submit" value="Enter Details">
+        </form>
+      </div>
+    </main>
+  </body>
+
+</html>
